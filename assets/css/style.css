@@ -1,0 +1,88 @@
+:root {
+  --starting: lightgray;
+  --correct: rgb(65, 184, 65);
+  --wrong: rgb(194, 43, 43);
+  --innerbox: slategray;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Silkscreen", cursive, sans-serif;
+}
+
+body {
+  background-color: var(--starting);
+  padding: 0;
+  margin: 0;
+}
+
+body .correct {
+  background-color: var(--correct);
+}
+body .wrong {
+  background-color: var(--wrong);
+}
+
+#outer-box {
+  padding: 20px;
+}
+
+#top-row {
+  height: 10%;
+}
+#timer {
+  float: right;
+}
+
+#inner-box {
+  height: 50%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14%;
+  text-align: center;
+  background-color: var(--innerbox);
+  border: solid 3px black;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px;
+  /* border-radius: 10%; */
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  margin-top: 17px;
+
+  /* height: 50%; */
+}
+.button-box button {
+  width: 50%;
+  padding: 5px;
+}
+
+#start-button,
+#next-button {
+  background-color: red;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.button .correct {
+  background-color: var(--correct);
+}
+.button .wrong {
+  background-color: var(--wrong);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  display: none;
+}

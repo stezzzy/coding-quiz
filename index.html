@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Coding Quiz</title>
+  </head>
+  <body>
+    <!-- Div container surrounding everything -->
+    <div id="outer-box">
+      <!-- Top nav bar containing highscores + timer -->
+      <div id="top-row">
+        <button class="view-highscore">View Highscores</button>
+        <p id="timer">x Seconds left (Timer)</p>
+      </div>
+      <!-- Line break -->
+      <hr style="margin-top: 4%" />
+
+      <main>
+        <div id="inner-box">
+          <header><h1>Coding Quiz Challenge</h1></header>
+          <p>
+            Try to answer the following code-related questions within the time
+            limit! Remember, incorrect answers will penalize your final score by
+            x seconds!
+          </p>
+
+          <div id="game-area" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="button-box">
+              <button class="button">Answer 1</button>
+              <button class="button">Answer 2</button>
+              <button class="button">Answer 3</button>
+              <button class="button">Answer 4</button>
+            </div>
+          </div>
+          <div class="controls">
+            <button id="start-button" class="button">Start Quiz!</button>
+            <button id="next-button" class="button hide">Next Question!</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
