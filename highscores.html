@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+<title>Highscores</title>
+</head>
+<body>
+    <h1 class="d-flex justify-content-center">Highscores</h1>
+    <div class="container d-flex justify-content-center my-5">
+        <div class="row">
+          <div id="initials"class="col-6 border border-dark">
+            Quiz Taker Initials
+          </div>
+          <div id="highScores" class="col-6 border border-dark">
+            Scores
+          </div>
+          <form class="d-flex row col-12">
+          <div class="form-group col-12 justify-content-center text-center p-5">
+            <label for="input-initials">Initials</label>
+            <input type="text" class="form-control" id="input-initials" placeholder="Put your Initials here">
+          </div>
+          <div class="row col-12 justify-content-center" style="margin-top: 5%; "><button type="submit" class="btn btn-danger justify-content-center my-5" onclick="saveHighScore(event)">Submit</button></div>
+        </form>
+        <div class="row col-12 d-flex justify-content-center my-5">
+            <a href="./index.html" class="btn btn-primary mr-4">Play Again</a>
+        </div>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+<script src="./assets/js/highscores.js"></script>
+</body>
+</html>
