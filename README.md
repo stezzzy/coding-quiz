@@ -6,7 +6,7 @@ A basic coding quiz to test a user's knowledge (and speed!). This project is wri
   
 Target Audience: Aspiring web developers.
 
-This project will allow users to study some of the basic web development language concepts that they either have already, or should learn along with the basics of HTML, CSS, and Javascript in a gameified manner.
+This project will allow users to study some of the basic web development language concepts that they either have already learned, or should learn along with the basics of HTML, CSS, and Javascript - in a gameified manner.
 
 ## Usage
 
