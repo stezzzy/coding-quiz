@@ -158,13 +158,17 @@ function chooseAnswer(s) {
     nextButton.classList.remove("hide")
   }
   else {
-    var finishButton = document.createElement("button");
-    finishButton.innerText = 'Save Score';
-    finishButton.classList.add("button");
+    nextButton.innerText = 'Save Score';
+  }
+  // Changed nextButton text to Save Score instead of creating new Save Score button.
+//   else {
+//     var finishButton = document.createElement("button");
+//     finishButton.innerText = 'Save Score';
+//     finishButton.classList.add("button");
     
-    finishButton.addEventListener("click", highScores);
-    answerButtons.appendChild(finishButton);
-  };
+//     // finishButton.addEventListener("click", highScores);
+//     answerButtons.appendChild(finishButton);
+//   };
   nextButton.classList.remove("hide");
 }
 // End Grade Answer selection
@@ -188,7 +192,7 @@ function gameOver() {
     return window.location.assign("./highscores.html")
   let userScore = {
     initials: "ns",
-    score: timeLeft,
+    score: currentScore,
   };
   localStorage.setItem("userScore", JSON.stringify(userScore));
   console.log(userScore);
