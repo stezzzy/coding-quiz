@@ -8,6 +8,8 @@ let nextButton = document.querySelector("#next-button");
 let questionEl = document.querySelector("#question");
 let answerButtons = document.querySelector("#answer-buttons");
 document.getElementById;
+let submitField = document.querySelector("#submit-field");
+let submitButton = document.getElementById("submitButton");
 
 let questions = [
   {
@@ -62,7 +64,7 @@ let questions = [
 
 let currentQuestion;
 let randomizeQuestions;
-
+let q = 0;
 let timeLeft = 101;
 let score = 0;
 let leaderBoard = [];
@@ -82,9 +84,9 @@ function startTimer() {
     timeLeft--;
     timerEl.textContent = timeLeft + " Seconds Remaining!";
 
-    if (timeLeft <= 0) {
+    if (timeLeft <= 0 || currentQuestion === questions.length) {
       clearInterval(timeInterval);
-      gameOver();
+    //   gameOver();
     }
   }, 1000);
 }
@@ -108,9 +110,8 @@ function nextQuestion() {
   console.log(currentQuestion);
   if (currentQuestion < questions.length) {
     showQuestions(randomizeQuestions[currentQuestion]);
-  }
-  else {
-    gameOver(); 
+  } else {
+    gameOver();
   }
 }
 
@@ -155,20 +156,19 @@ function chooseAnswer(s) {
     setClass(button, button.dataset.correct);
   });
   if (currentQuestion + 1 < randomizeQuestions.length) {
-    nextButton.classList.remove("hide")
-  }
-  else {
-    nextButton.innerText = 'Save Score';
+    nextButton.classList.remove("hide");
+  } else {
+    nextButton.innerText = "Save Score";
   }
   // Changed nextButton text to Save Score instead of creating new Save Score button.
-//   else {
-//     var finishButton = document.createElement("button");
-//     finishButton.innerText = 'Save Score';
-//     finishButton.classList.add("button");
-    
-//     // finishButton.addEventListener("click", highScores);
-//     answerButtons.appendChild(finishButton);
-//   };
+  //   else {
+  //     var finishButton = document.createElement("button");
+  //     finishButton.innerText = 'Save Score';
+  //     finishButton.classList.add("button");
+
+  //     // finishButton.addEventListener("click", highScores);
+  //     answerButtons.appendChild(finishButton);
+  //   };
   nextButton.classList.remove("hide");
 }
 // End Grade Answer selection
@@ -188,14 +188,33 @@ function clearClass(element) {
 }
 
 function gameOver() {
-    alert("Game over!")
+  if (currentQuestion === questions.length) {
+    submitField.classList.remove("hide");
+  }
+
+  submitButton.addEventListener("click", function (event) {
+    let inputInitials = document.getElementById('input-initials');
+    event.preventDefault();
+    if (localStorage.getItem("userScore")) {
+      var allScores = JSON.parse(localStorage.getItem("userScore"));
+      console.log(allScores);
+      console.log(typeof allScores);
+    } else {
+      var allScores = [];
+    }
+
+    console.log(timeLeft);
+    let userScore = {
+      initials: inputInitials.value,
+      score: timeLeft,
+    };
+    allScores.push(userScore);
+    localStorage.setItem("userScore", JSON.stringify(allScores));
+    console.log(userScore);
     return window.location.assign("./highscores.html")
-  let userScore = {
-    initials: "ns",
-    score: currentScore,
-  };
-  localStorage.setItem("userScore", JSON.stringify(userScore));
-  console.log(userScore);
+  });
+
+  
 }
 
 //TODO: Make a timer that counts down from 100 seconds, and with each incorrect input (either halves the time or subtracts 10)

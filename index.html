@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,8 +49,21 @@
             <button id="next-button" class="button hide">Next Question!</button>
           </div>
         </div>
+        <div id="submit-field"class="container hide">
+          <form class="d-flex row col-12">
+            <div class="form-group col-12 justify-content-center text-center p-5">
+              <label for="input-initials">Initials</label>
+              <input type="text" class="form-control" id="input-initials" placeholder="Put your Initials here">
+            </div>
+            <div class="row col-12 justify-content-center" style="margin-top: 5%; "><button type="submit" id="submitButton" class="btn btn-danger justify-content-center my-5">Submit</button></div>
+          </form>
+        </div>
+
       </main>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
