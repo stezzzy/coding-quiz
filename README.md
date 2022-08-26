@@ -10,7 +10,7 @@ This project will allow users to study some of the basic web development languag
 
 ## Usage
 
-To use the password generator:
+To use the coding quiz:
 
 1. Start the quiz via the "Start Quiz!" Button - which will subsequently start a timer(the user's score).
 2. Answer each question as fast as possible in a series of randomly sorted hard-coded questions (If they get a question incorrect, it will detriment their score by 15 seconds).
